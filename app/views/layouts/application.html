@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <title>Innobook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+
+
+<div class="container">
+
+        <div class="navbar-brand">
+
+          <div class="brand">
+            <%= link_to "Innobook", root_path %>
+          </div>
+          <!-- <div class="dropdown">
+
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span class="glyphicon glyphicon-filter" class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a><input type="checkbox"/> AR</a></li>
+              <li><a><input type="checkbox"/> IoT</a></li>
+              <li><a><input type="checkbox"/> Physical Demo</a></li>
+            </ul>
+
+
+
+        </div> -->
+          <div class="col-lg-4">
+            <div class="input-group">
+              <div class="input-group-btn">
+
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-filter"></span>
+                  <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li><h4 style="padding-left:5px">Region</h4></li>
+                      <li><a>EMEA</a></li>
+                      <li><a>MEE</a></li>
+                      <li><a>APJ</a></li>
+                      <li><a>NA</a></li>
+                      <li><a>LAC</a></li>
+                  <li role="separator" class="divider"></li>
+                    <li><h4 style="padding-left:5px">Industry</h4></li>
+                      <li><a>Aerospace & Defense</a></li>
+                      <li><a>Defense & Security</a></li>
+                      <li><a>Healthcare</a></li>
+                      <li><a>Retail</a></li>
+                      <li><a>Utilities</a></li>
+                      <li><a>More Industries >></a></li>
+
+                    <li role="separator" class="divider"></li>
+                      <li><h4 style="padding-left:5px">Technology</h4></li>
+                        <li><a>Augmented Reality & Defense</a></li>
+                        <li><a>Virtual Reality</a></li>
+                        <li><a>Machine Learning</a></li>
+                        <li><a>Internet of Things</a></li>
+                        <li><a>More Technologies >></a></li>
+                    <li role="separator" class="divider"></li>
+                      <li><h4 style="padding-left:5px">  Demo Type</h4></li>
+                        <li><a>Physical</a></li>
+                        <li><a>Digital</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input type="text" class="form-control" aria-label="...">
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+
+
+
+          <% if user_signed_in? %>
+            <div class="nav navbar-nav navbar-right" >
+              <div class="dropdown">
+
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="glyphicon glyphicon-user" class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li>
+                    <%= link_to "New Pin", new_pin_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Account", edit_user_registration_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          <% else %>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <%= link_to "Sign Up", new_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to "Sign In", new_user_session_path %>
+              </li>
+            </ul>
+          <% end %>
+
+      </div>
+</div>
+
+  </nav>
+  <div class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-info" %>
+    <% end %>
+    <%= yield %>
+  </div>
+</body>
