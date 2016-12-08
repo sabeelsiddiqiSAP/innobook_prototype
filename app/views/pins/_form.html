@@ -47,7 +47,10 @@
     <h4>Ease of Demo Setup:</h4>
     <%= f.select :ease, options_for_select([["Select One", ""], "Easy", "Medium","Hard"]), :class => 'genForm_dropBox'%>
   </div>
-  
+  <div class="form-group">
+    <h4>Creation Date:</h4>
+    <%= f.date_select :createdate %>
+  </div>
   <div class="form-group">
     <%= f.input :createdby, input_html: { class: 'form-control' } %>
   </div>
