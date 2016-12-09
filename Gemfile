@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'commontator', '~> 4.11.1'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'commontator', '~> 4.11.1'
 gem 'haml', '~> 4.0.5'
 gem 'devise', '~> 3.3.0'
 gem "font-awesome-rails"

@@ -1,5 +1,5 @@
 # This migration comes from commontator (originally 0)
-class Commontator < ActiveRecord::Migration
+class InstallCommontator < ActiveRecord::Migration
   def change
     create_table :commontator_comments do |t|
       t.string   :creator_type
