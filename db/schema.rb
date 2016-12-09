@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20161209145628) do
 
-  create_table "comments", force: true do |t|
-    t.text     "content"
-    t.integer  "pin_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["pin_id"], name: "index_comments_on_pin_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
-
   create_table "commontator_comments", force: true do |t|
     t.string   "creator_type"
     t.integer  "creator_id"
