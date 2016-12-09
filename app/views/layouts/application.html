@@ -82,11 +82,21 @@
 
           <% if user_signed_in? %>
             <div class="nav navbar-nav navbar-right" >
+
               <div class="dropdown">
+              <li class="btn btn-default" role="button">
+                    <span class="glyphicon glyphicon-pushpin"></span>
+                    <%= link_to "New Pin", new_pin_path %>
+                  </li>
+
 
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <span class="glyphicon glyphicon-user" class="caret"></span>
                 </button>
+
+
+
+
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   <li>
@@ -100,8 +110,7 @@
                   </li>
                 </ul>
 
-                <a class="btn btn-success" role="button" onclick="window.open('https://www.surveymonkey.com/r/2LCVXXN')">Innobook Survey</a>
-
+                
               </div>
            
 
@@ -129,4 +138,11 @@
     <% end %>
     <%= yield %>
   </div>
+
+<nav class="navbar navbar-default  navbar-fixed-bottom" role="navigation">
+    <div class="container text-center">
+        <p class="navbar-text col-md-12 col-sm-12 col-xs-12"><a class="btn btn-success" role="button" onclick="window.open('https://www.surveymonkey.com/r/2LCVXXN')">Innobook Survey</a></p>
+    </div>
+</nav>
+
 </body>
