@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.2.3'
 gem 'rails_autolink'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
