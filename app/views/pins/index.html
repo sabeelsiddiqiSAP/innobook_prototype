@@ -5,7 +5,7 @@
         <%= link_to pin.title, pin %>
       </h4>
 
-      <div class="hovereffect">
+<!--       <div class="hovereffect">
           <%= link_to (image_tag pin.image.url), pin %>
                       <p class="set1">
                           <a>
@@ -17,7 +17,7 @@
                             <i class="glyphicon glyphicon-thumbs-up"></i>
                           </a>
                       </p>
-          </div>
+          </div> -->
 
       <!-- <%= link_to (image_tag pin.image.url), pin %> -->
 
@@ -29,6 +29,27 @@
         <span class="glyphicon glyphicon-thumbs-up"></span>
         <%= pin.get_upvotes.size %>
       <% end %> -->
+
+        <div class="btn-group" style="padding-bottom:10px">
+          <%= link_to like_pin_path(pin), method: :put, class: "btn btn-default" do %>
+            <span class="glyphicon glyphicon-thumbs-up"></span>
+            <%= pin.get_upvotes.size %>
+          <% end %>
+          
+          <button class="btn btn-default">
+            <span class="glyphicon glyphicon-pushpin"></span>
+          </button>
+
+
+
+          <button class="btn btn-default">
+            <span class="glyphicon glyphicon-share-alt"></span>
+          </button>
+
+
+        </div>
+
+
     </div>
   <% end %>
 </div>
