@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.2.3'
 gem 'rails_autolink'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'commontator', '~> 4.11.1'
 gem 'haml', '~> 4.0.5'
 gem 'devise', '~> 3.3.0'
 gem "font-awesome-rails"
